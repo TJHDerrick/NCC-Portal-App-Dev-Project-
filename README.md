@@ -6,24 +6,24 @@ Note that this is a college project, and the contributors to this respository do
 the National Cadet Corps (Singapore) in any way. 
 
 
-**Introduction**
+**Introduction:**
 National Cadet Corps (Singapore) is a youth organization that aims to instill leadership and military skills to its members.
 Through a series of activties such as flying fox, kayaking, obstacle courses, it encourages youth to be adventurous and bold.
 Since 2018, NCC's website has discontinued and it has been disseminating information through the respective Commanding Officers 
 from each secondary school and their Facebook/Instagram page. 
 
 
-**Objectives of this project**
+**Objectives of this project:**
 An application will be developed to meet the needs of the users and members. Through innovation and 
 empathetic thinking, a solution will be developed to transform the organization's operationational process.
 
 
-**Features of the website**
+**Features of the website:**
 A system with the functions to
 (a) sign-up for events (b) purchase items (c) check inventory (d) book adventure station activities 
 
 
-**IMPORTANT**
+**IMPORTANT:**
 Any unauthorized distirbution of code in this respository (without the owner's permisison) is prohibited. Some examples of distirubtion of code 
 are as follows:
 1. Copying the codes directly 
