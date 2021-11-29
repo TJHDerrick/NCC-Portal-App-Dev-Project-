@@ -9,7 +9,7 @@ the National Cadet Corps (Singapore) in any way.
 **Introduction**
 National Cadet Corps (Singapore) is a youth organization that aims to instill leadership and military skills to its members.
 Through a series of activties such as flying fox, kayaking, obstacle courses, it encourages youth to be adventurous and bold.
-Since 2018, NCC's website has discontinued and it has been disseminating information through the respective Commanding Officers \n
+Since 2018, NCC's website has discontinued and it has been disseminating information through the respective Commanding Officers 
 from each secondary school and their Facebook/Instagram page. 
 
 
@@ -19,7 +19,7 @@ empathetic thinking, a solution will be developed to transform the organization'
 
 
 **IMPORTANT**
-Any unauthorized distirbution of code in this respository (without the owner's permisison) is prohibited. Some examples of distirubtion of code \n
+Any unauthorized distirbution of code in this respository (without the owner's permisison) is prohibited. Some examples of distirubtion of code 
 are as follows:
 1. Copying the codes directly 
 2. Screen-sharing the codes
