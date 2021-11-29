@@ -1,6 +1,6 @@
 # NCC-Portal-App-Dev-Project-
 
-"""
+
 **Disclaimer**
 Note that this is a college project, and the contributors to this respository does not represent 
 the National Cadet Corps (Singapore) in any way. 
@@ -26,5 +26,5 @@ are as follows:
 3. Physically showing the codes to others
 4. Screen-capture the codes
 5. Exporting the files
-"""
+
 
