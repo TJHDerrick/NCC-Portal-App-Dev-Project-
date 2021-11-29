@@ -32,4 +32,4 @@ are as follows:
 4. Screen-capture the codes
 5. Exporting the files
 
-**Written and Updated by Derrick Tan (29 November 2021)**
+**Written and Updated by Derrick Tan: (29 November 2021)**
