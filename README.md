@@ -1,7 +1,7 @@
 # NCC-Portal-App-Dev-Project-
 
 
-**Disclaimer**
+**Disclaimer:**
 Note that this is a college project, and the contributors to this respository does not represent 
 the National Cadet Corps (Singapore) in any way. 
 
