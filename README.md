@@ -19,7 +19,7 @@ empathetic thinking, a solution will be developed to transform the organization'
 
 
 **Features of the website**
-A system with the ability to
+A system with the functions to
 (a) sign-up for events (b) purchase items (c) check inventory (d) book adventure station activities 
 
 
