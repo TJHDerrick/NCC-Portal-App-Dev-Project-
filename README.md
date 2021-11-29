@@ -18,6 +18,11 @@ An application will be developed to meet the needs of the users and members. Thr
 empathetic thinking, a solution will be developed to transform the organization's operationational process.
 
 
+**Features of the website**
+A system with the ability to
+(a) sign-up for events (b) purchase items (c) check inventory (d) book adventure station activities 
+
+
 **IMPORTANT**
 Any unauthorized distirbution of code in this respository (without the owner's permisison) is prohibited. Some examples of distirubtion of code 
 are as follows:
