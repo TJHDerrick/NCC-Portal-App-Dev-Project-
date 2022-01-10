@@ -18,6 +18,9 @@ def contact_us():
 def equipment_loan():
     return render_template('equipmentLoan.html')
 
+@app.route('/facilityReservation')
+def facility_reservation():
+    return render_template('facilityReservation.html')
 
 if __name__ == '__main__':
     app.run(port=5001)
