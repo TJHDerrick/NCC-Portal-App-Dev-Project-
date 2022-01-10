@@ -14,6 +14,10 @@ def home():
 def contact_us():
     return render_template('contactUs.html')
 
+@app.route('/equipmentLoan')
+def equipment_loan():
+    return render_template('equipmentLoan.html')
+
 
 if __name__ == '__main__':
     app.run(port=5001)

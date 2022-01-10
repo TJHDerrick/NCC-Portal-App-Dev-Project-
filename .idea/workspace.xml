@@ -2,13 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15ec2675-f82d-403d-8f9a-8da48ac7f86c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/images/homepagebackground.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/homepagebackgroundresize.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/homepagebackgroundresizereal.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/ricepaper-green.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/equipmentLoan.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library.bak" beforeDir="false" afterPath="$PROJECT_DIR$/library.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library.dat" beforeDir="false" afterPath="$PROJECT_DIR$/library.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library.dir" beforeDir="false" afterPath="$PROJECT_DIR$/library.dir" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contactUs.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contactUs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,6 +38,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images" />
@@ -27,6 +46,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Holden Han\Documents\GitHub\NCC-Portal-App-Dev-Project-\static\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Holden Han\Documents\GitHub\NCC-Portal-App-Dev-Project-\static\images" />
     </key>
   </component>
