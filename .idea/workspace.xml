@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15ec2675-f82d-403d-8f9a-8da48ac7f86c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/event_update.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NCC-Portal-App-Dev-Project-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NCC-Portal-App-Dev-Project-.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
