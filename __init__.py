@@ -15,9 +15,9 @@ def contact_us():
     return render_template('contactUs.html')
 
 
-@app.route('/Exchange')
+@app.route('/kitExchange')
 def kit_exchange():
-    return render_template('KitExchange.html')
+    return render_template('kitExchange.html')
 
 
 @app.route('/equipmentLoan')
