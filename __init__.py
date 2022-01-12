@@ -15,6 +15,11 @@ def contact_us():
     return render_template('contactUs.html')
 
 
+@app.route('/Exchange')
+def kit_exchange():
+    return render_template('KitExchange.html')
+
+
 @app.route('/equipmentLoan')
 def equipment_loan():
     return render_template('equipmentLoan.html')
