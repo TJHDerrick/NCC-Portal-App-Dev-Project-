@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block title %}Library Loan System - Retrieve events{% endblock %}
+
+{% block content %}
+<style>
+    input, button, submit
+{
+  border:none;
+}
+</style>
+<h1 class="display-4" style="margin-top:110px">Retrieve events</h1>
+<div>
+    {% if count == 0 %}
+    <p>There are no events</p>
+    {% elif count == 1 %}
+    <p>There is 1 event</p>
+    {% else %}
+    <p>There are {{ count }} events</p>
+    {% endif %}
+</div>
+<div>
+    <table
+            id="table"
+            data-toggle="table"
+            data-height="460"
+            data-show-columns="true"
+            data-show-refresh="true"
+            data-show-columns-toggle-all="true"
+            data-show-pagination-switch="true"
+            data-show-toggle="true"
+            data-show-fullscreen="true"
+            data-buttons="buttons">
+        <thead>
+        <tr>
+            <th data-field="id">ID</th>
+            <th data-field="title">Title</th>
+            <th data-field="description">Description</th>
+            <th data-field="start_date">Start Date</th>
+            <th data-field="end_date">End Date</th>
+            <th data-field="time">Time</th>
+            <th data-field="location">Location</th>
+            <th data-field="visibility">Visibility</th>
+            <th data-field="sign_up_no">No of Sign Up</th>
+            <th data-field="current_sign_up_no">No of CSU</th>
+            <th data-field="">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for event in event_list %}
+        <tr>
+            <td>{{event.get_id()}}</td>
+            <td>{{event.get_title()}}</td>
+            <td>{{event.get_description()}}</td>
+            <td>{{event.get_start_date()}}</td>
+            <td>{{event.get_end_date()}}</td>
+            <td>{{event.get_time()}}</td>
+            <td>{{event.get_location()}}</td>
+            <td>{{event.get_visibility()}}</td>
+            <td>{{event.get_sign_up_no()}}</td>
+            <td>{{event.get_current_sign_up_no()}}</td>
+            <td style="text-align: center;">
+                <div class="dropdown">
+                    <button class="btn btn-outline-dark" type="button" id="dropdownMenuButton{{event.get_id()}}"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{event.get_id()}}">
+                        <li><a class="dropdown-item" href="/updateEvent/{{event.get_id()}}/">Update</a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <form id="delete{{event.get_id()}}" action="{{url_for('event.delete_event', id=event.get_id())}}" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </a></li>
+                    </ul>
+                </div>
+            </td>
+
+            <!--            <td><a href="#" class="btn btn-warning">Update</a></td>-->
+            <!--            <td>-->
+            <!--                <form action="" method="POST">-->
+            <!--                    <input type="submit" value="Delete" class="btn btn-danger">-->
+            <!--                </form>-->
+            <!--            </td>-->
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+</script>
+
+{% endblock %}
+

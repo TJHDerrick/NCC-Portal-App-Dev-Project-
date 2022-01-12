@@ -1,9 +1,10 @@
 from flask import Flask, render_template
 from user_controller import user_controller
+from event_controller import event_controller
 
 app = Flask(__name__)
 app.register_blueprint(user_controller)
-
+app.register_blueprint(event_controller)
 
 @app.route('/')
 def home():
@@ -28,6 +29,11 @@ def facility_reservation():
 @app.route('/events')
 def events():
     return render_template('events.html')
+
+
+# @app.route('/createEvent')
+# def create_event():
+#     return render_template('createEvent.html')
 
 
 if __name__ == '__main__':
