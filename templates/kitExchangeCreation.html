@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Library Loan System - Create User{% endblock %}
+{% block title %}Library Loan System - Create Item{% endblock %}
 
 {% block content %}
 {% from "includes/_formHelper.html" import render_field %}
@@ -8,7 +8,7 @@
 <div class="col d-flex justify-content-center">
     <div class="card shadow w-50">
   <div class="card-header">
-      <h3>Create Event</h3>
+      <h3>Add Item</h3>
   </div>
   <div class="card-body">
 <!--    <h5 class="card-title">Special title treatment</h5>
@@ -16,31 +16,19 @@
     <a href="#" class="btn btn-primary">Go somewhere</a>-->
       <form class="row g-3" method="POST" action="">
     <div class="col-12">
-        {{ render_field(form.title, class="form-control") }}
+        {{ render_field(form.name, class="form-control") }}
     </div>
     <div class="col-12">
         {{ render_field(form.description, class="form-control") }}
     </div>
-    <div class="col-md-6">
-        {{ render_field(form.start_date, class="form-control datepicker") }}
-    </div>
-    <div class="col-md-6">
-        {{ render_field(form.end_date, class="form-control datepicker") }}
-    </div>
     <div class="col-md-4">
-        {{ render_field(form.time, class="form-control") }}
-    </div>
-    <div class="col-md-2">
-        {{ render_field(form.sign_up_no, class="form-control") }}
+        {{ render_field(form.sizes, class="form-control") }}
     </div>
     <div class="col-md-6">
-        {{ render_field(form.eventlocation, class="form-control") }}
+        {{ render_field(form.location, class="form-control") }}
     </div>
     <div class="col-12">
-        {{ render_field(form.visibility, class="form-check") }}
-    </div>
-    <div class="col-12">
-        <button type="submit" class="btn btn-primary"><i class="fas fa-calendar-plus"></i> Create Event!</button>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-calendar-plus"></i> Add Item!</button>
     </div>
 </form>
 

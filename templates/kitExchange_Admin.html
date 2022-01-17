@@ -28,7 +28,8 @@
             data-show-columns-toggle-all="true"
             data-show-pagination-switch="true"
             data-show-toggle="true"
-            data-show-fullscreen="true">
+            data-show-fullscreen="true"
+            data-buttons="buttons">
         <thead>
         <tr>
             <th data-field="id">ID</th>
@@ -36,6 +37,7 @@
             <th data-field="description">Description</th>
             <th data-field="sizes">Up to Sizes</th>
             <th data-field="location">Location</th>
+            <th data-field="">Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -46,6 +48,22 @@
             <td>{{creation.get_description()}}</td>
             <td>{{creation.get_sizes()}}</td>
             <td>{{event.get_location()}}</td>
+            <td style="text-align: center;">
+                <div class="dropdown">
+                    <button class="btn btn-outline-dark" type="button" id="dropdownMenuButton{{creation.get_id()}}"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{creation.get_id()}}">
+                        <li><a class="dropdown-item" href="/updatekitExchange/{{creation.get_id()}}/">Update</a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <form id="delete{{creation.get_id()}}" action="{{url_for('creation.delete_creation', id=creation.get_id())}}" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </a></li>
+                    </ul>
+                </div>
+            </td>
         </tr>
         {% endfor %}
 
@@ -54,4 +72,3 @@
 </div>
 
 {% endblock %}
-
