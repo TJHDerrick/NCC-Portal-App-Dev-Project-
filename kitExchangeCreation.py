@@ -1,15 +1,16 @@
+
 from datetime import datetime
 
 
 class Creation:
+    id = 0
     sizes_dict = {
      'S': 'Small', 'M': 'Medium', 'L': 'Large'
     }
-    id = 0
 
     def __init__(self, name, description, sizes, location):
         Creation.id += 1
-        self.__id = Creation
+        self.__id = Creation.id
         self.__name = name
         self.__description = description
         self.__sizes = sizes
@@ -41,7 +42,7 @@ class Creation:
     def set_sizes(self, sizes):
         self.__sizes = sizes
 
-    def set_sizes(self, location):
+    def set_location(self, location):
         self.__location = location
 
 

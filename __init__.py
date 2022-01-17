@@ -23,11 +23,6 @@ def kit_exchange():
     return render_template('kitExchange.html')
 
 
-@app.route('/kitExchangeCreation')
-def kit_exchange_creation():
-    return render_template('kitExchangeCreation.html')
-
-
 @app.route('/kitExchange_Admin')
 def kit_exchange_admin():
     return render_template('kitExchange_Admin.html')

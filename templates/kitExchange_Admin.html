@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Library Loan System - Retrieve events{% endblock %}
+{% block title %}Library Loan System - Admin Items Stock{% endblock %}
 
 {% block content %}
 <style>
@@ -7,6 +7,7 @@
 {
   border:none;
 }
+
 </style>
 <h1 class="display-4" style="margin-top:110px">Items</h1>
 <div>
@@ -47,7 +48,7 @@
             <td>{{creation.get_name()}}</td>
             <td>{{creation.get_description()}}</td>
             <td>{{creation.get_sizes()}}</td>
-            <td>{{event.get_location()}}</td>
+            <td>{{creation.get_location()}}</td>
             <td style="text-align: center;">
                 <div class="dropdown">
                     <button class="btn btn-outline-dark" type="button" id="dropdownMenuButton{{creation.get_id()}}"
@@ -57,7 +58,8 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{creation.get_id()}}">
                         <li><a class="dropdown-item" href="/updatekitExchange/{{creation.get_id()}}/">Update</a></li>
                         <li><a class="dropdown-item" href="#">
-                            <form id="delete{{creation.get_id()}}" action="{{url_for('creation.delete_creation', id=creation.get_id())}}" method="POST">
+                            <form id="delete{{creation.get_id()}}"
+                                  action="{{url_for('creation.delete_creation', id=creation.get_id())}}" method="POST">
                                 <button type="submit">Delete</button>
                             </form>
                         </a></li>

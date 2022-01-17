@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Library Loan System - Retrieve events{% endblock %}
+{% block title %}Library Loan System - Items Exchange{% endblock %}
 
 {% block content %}
 <style>
@@ -8,6 +8,7 @@
   border:none;
 }
 </style>
+
 <h1 class="display-4" style="margin-top:110px">Items</h1>
 <div>
     {% if count == 0 %}
@@ -45,7 +46,7 @@
             <td>{{creation.get_name()}}</td>
             <td>{{creation.get_description()}}</td>
             <td>{{creation.get_sizes()}}</td>
-            <td>{{event.get_location()}}</td>
+            <td>{{creation.get_location()}}</td>
         </tr>
         {% endfor %}
 

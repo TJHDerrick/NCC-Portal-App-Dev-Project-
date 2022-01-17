@@ -8,14 +8,20 @@ from kitExchange_service import get_creation_list, save_creation, save_update_cr
 kitExchange_controller = Blueprint('creation', __name__)
 
 
-@kitExchange_controller.route('/retrieveCreation')
+@kitExchange_controller.route('/kitExchange')
 def retrieve_creation():
-    event_list = get_creation_list()
-    return render_template('kitExchange.html', count=len(event_list), event_list=event_list)
+    creation_list = get_creation_list()
+    return render_template('kitExchange.html', count=len(creation_list), creation_list=creation_list)
 
 
-@kitExchange_controller.route('/createCreation', methods=['GET', 'POST'])
-def create_event():
+@kitExchange_controller.route('/kitExchange_Admin')
+def retrieve_creation_admin():
+    creation_list = get_creation_list()
+    return render_template('kitExchange_Admin.html', count=len(creation_list), creation_list=creation_list)
+
+
+@kitExchange_controller.route('/kitExchangeCreation', methods=['GET', 'POST'])
+def create_creation():
     create_creation_form = CreateCreationForm(request.form)
     if request.method == 'POST' and create_creation_form.validate():
         name = create_creation_form.name.data
@@ -27,7 +33,7 @@ def create_event():
 
         save_creation(creation)
         # return redirect('/retrieveUsers')
-        return redirect(url_for('event.kitExchange_Admin'))
+        return redirect(url_for('creation.retrieve_creation'))
     return render_template('kitExchangeCreation.html', form=create_creation_form)
 
 
@@ -47,21 +53,21 @@ def update_kit(id):
         print(update_creation_form.location.data)
         db['creation'] = creation_dict
 
-        return redirect(url_for('creation.retrieve_creation'))
+        return redirect(url_for('creation.retrieve_creation_admin'))
     else:
         creation = retrieve_creation_from_id(id)
         update_creation_form.name.data = creation.get_name()
         update_creation_form.description.data = creation.get_description()
         update_creation_form.sizes.data = creation.get_sizes()
         update_creation_form.location.data = creation.get_location()
-        return render_template('kitExchange_Admin.html', form=update_creation_form)
+        return render_template('updatekitExchange.html', form=update_creation_form)
 
 
 @kitExchange_controller.route('/deleteCreation/<int:id>', methods=['POST'])
-def delete_event(id):
+def delete_creation(id):
     db = shelve.open('library', 'w')
     creation_dict = db['creation']
     creation = creation_dict.pop(id)
     db['creation'] = creation_dict
     db.close()
-    return redirect(url_for('creation.kitExchange_Admin'))
+    return redirect(url_for('creation.retrieve_creation_admin'))
