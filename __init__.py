@@ -1,12 +1,12 @@
 from flask import Flask, render_template
 from user_controller import user_controller
 from event_controller import event_controller
-from loan_controller import loan_controller
+from kitExchange_controller import kitExchange_controller
 
 app = Flask(__name__)
 app.register_blueprint(user_controller)
 app.register_blueprint(event_controller)
-app.register_blueprint(loan_controller)
+app.register_blueprint(kitExchange_controller)
 
 @app.route('/')
 def home():
@@ -21,6 +21,11 @@ def contact_us():
 @app.route('/kitExchange')
 def kit_exchange():
     return render_template('kitExchange.html')
+
+
+@app.route('/kitExchange_Admin')
+def kit_exchange_admin():
+    return render_template('kitExchange_Admin.html')
 
 
 @app.route('/equipmentLoan')
@@ -44,4 +49,4 @@ def events():
 
 
 if __name__ == '__main__':
-    app.run(port=5002)
+    app.run(port=5002, debug=True)

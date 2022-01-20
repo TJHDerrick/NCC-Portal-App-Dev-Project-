@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Library Loan System - Update Items{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+
+
+<div class="col d-flex justify-content-center">
+    <div class="card shadow w-50">
+        <div class="card-header">
+            <h3>Update Item</h3>
+        </div>
+        <div class="card-body">
+            <!--    <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>-->
+            <form class="row g-3" method="POST" action="">
+                <div class="col-12">
+                    {{ render_field(form.name, class="form-control") }}
+                </div>
+                <div class="col-12">
+                    {{ render_field(form.description, class="form-control") }}
+                </div>
+                <div class="col-md-4">
+                    {{ render_field(form.sizes, class="form-control") }}
+                </div>
+                <div class="col-md-6">
+                    {{ render_field(form.location, class="form-control") }}
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-outline-warning"><i class="fas fa-calendar-plus"></i> Update
+                        Event!
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $("label").addClass("form-label");
+
+</script>
+{% endblock %}
+
+
