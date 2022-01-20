@@ -2,22 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15ec2675-f82d-403d-8f9a-8da48ac7f86c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/event.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/createEvent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/retrieveEvent.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/updateEvent.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/createLoan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/retrieveLoan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/testpage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/updateLoan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NCC-Portal-App-Dev-Project-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NCC-Portal-App-Dev-Project-.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event_update.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/library.bak" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/library.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/library.dir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/createUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/createUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/equipmentLoan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/equipmentLoan.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/retrieveUsers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/retrieveUsers.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,11 +50,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Holden Han\Documents\GitHub\NCC-Portal-App-Dev-Project-\templates" />
+      <recent name="C:\Users\Holden Han\Documents\GitHub\NCC-Portal-App-Dev-Project-" />
       <recent name="C:\Users\wongz\Documents\GitHub\NCC-Portal-App-Dev-Project-" />
       <recent name="C:\Users\Holden Han\Documents\GitHub\NCC-Portal-App-Dev-Project-\templates\includes" />
       <recent name="C:\Users\Holden Han\Documents\GitHub\NCC-Portal-App-Dev-Project-\static\images" />
@@ -177,5 +181,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

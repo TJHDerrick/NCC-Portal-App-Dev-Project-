@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Library Loan System - Retrieve Users{% endblock %}
+{% block title %}Retrieve Users{% endblock %}
 
 {% block content %}
 <h1 class="display-4" style="margin-top:110px">Retrieve Users</h1>
@@ -22,6 +22,7 @@
             <th>Gender</th>
             <th>Membership</th>
             <th>Time Created</th>
+            <th>Active Facility Reservation</th>
             <th></th>
             <th></th>
         </tr>
@@ -35,6 +36,7 @@
             <td>{{user.get_gender_str()}}</td>
             <td>{{user.get_membership_str()}}</td>
             <td>{{user.get_time_created_str()}}</td>
+            <td>{{user.get_facility_reservation()}}</td>
             <td><a href="#" class="btn btn-warning">Update</a></td>
             <td>
                 <form action="" method="POST">

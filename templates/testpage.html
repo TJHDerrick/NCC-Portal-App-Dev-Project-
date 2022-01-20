@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Create User{% endblock %}
+
+{% block content %}
+{% from "includes/_formHelper.html" import render_field %}
+
+<h1 class="display-4" style="margin-top:110px">Create User</h1>
+
+<form method="POST" action="">
+    <div class="form-group">
+        {{ render_field(form.facilityreserve, class="form-control") }}
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary mt-3"/>
+</form>
+{% endblock %}
