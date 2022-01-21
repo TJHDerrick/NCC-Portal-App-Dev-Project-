@@ -1,58 +1,131 @@
 {% extends "base.html" %}
-{% block title %}Library Loan System - Items Exchange{% endblock %}
+{% block title %}NCC Singapore - Kit Exchange{% endblock %}
 
-{% block content %}
 <style>
-    input, button, submit
-{
-  border:none;
+div.items {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
 }
+
+div.items:hover {
+  border: 1px solid #777;
+}
+
+div.items img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 </style>
-
-<h1 class="display-4" style="margin-top:110px">Items</h1>
-<div>
-    {% if count == 0 %}
-    <p>There are no Items</p>
-    {% elif count == 1 %}
-    <p>There is 1 Items</p>
-    {% else %}
-    <p>There are {{ count }} Items</p>
-    {% endif %}
+</head>
+<div class="responsive">
+<div class="items">
+  <a target="_blank" href="">
+    <img src="//static/images/Beret.PNG" alt="NCC Beret" width="600" height="400">
+  </a>
+  <div class="desc">NCC Beret</div>
 </div>
-<div>
-    <table
-            id="table"
-            data-toggle="table"
-            data-height="460"
-            data-show-columns="true"
-            data-show-refresh="true"
-            data-show-columns-toggle-all="true"
-            data-show-pagination-switch="true"
-            data-show-toggle="true"
-            data-show-fullscreen="true">
-        <thead>
-        <tr>
-            <th data-field="id">ID</th>
-            <th data-field="name">Name</th>
-            <th data-field="description">Description</th>
-            <th data-field="sizes">Up to Sizes</th>
-            <th data-field="location">Location</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for creation in creation_list %}
-        <tr>
-            <td>{{creation.get_id()}}</td>
-            <td>{{creation.get_name()}}</td>
-            <td>{{creation.get_description()}}</td>
-            <td>{{creation.get_sizes()}}</td>
-            <td>{{creation.get_location()}}</td>
-        </tr>
-        {% endfor %}
-
-        </tbody>
-    </table>
 </div>
 
-{% endblock %}
+<div class="responsive">
+<div class="items">
+  <a target="_blank" href="">
+    <img src="//static/images/UniformPants.PNG" alt="NCC Uniform Pants" width="600" height="400">
+  </a>
+  <div class="desc">NCC Uniform Pants</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="items">
+  <a target="_blank" href="">
+    <img src="//static/images/JockeyCap.PNG" alt="NCC Jockey Cap" width="600" height="400">
+  </a>
+  <div class="desc">NCC Jockey Cap</div>
+</div>
+</div>
+
+
+<div class="responsive">
+<div class="items">
+  <a target="_blank" href="">
+    <img src="//static/images/Badge.PNG" alt="NCC Badge" width="600" height="400">
+  </a>
+  <div class="desc">NCC Badge</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="items">
+  <a target="_blank" href="">
+    <img src="//static/images/UniformTop.PNG" alt="NCC Uniform Attire" width="600" height="400">
+  </a>
+  <div class="desc">NCC Uniform Attire</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="items">
+  <a target="_blank" href="">
+    <img src="//static/images/Boots.PNG" alt="NCC Boots" width="600" height="400">
+  </a>
+  <div class="desc">NCC Boots</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="items">
+  <a target="_blank" href="">
+    <img src="//static/images/Gutters.PNG" alt="NCC Gutters" width="600" height="400">
+  </a>
+  <div class="desc">NCC Gutters</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="items">
+  <a target="_blank" href="">
+    <img src="//static/images/BootLaces.PNG" alt="NCC Boots Laces" width="600" height="400">
+  </a>
+  <div class="desc">NCC Boots Laces</div>
+</div>
+</div>
+
+<div class="clearfix"></div>
+
+
+
 
