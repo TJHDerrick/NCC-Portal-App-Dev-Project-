@@ -8,40 +8,37 @@
 <div class="col d-flex justify-content-center">
     <div class="card shadow w-50">
   <div class="card-header">
-      <h3>Create Event</h3>
+      <h3>Sign Up Event</h3>
   </div>
   <div class="card-body">
 <!--    <h5 class="card-title">Special title treatment</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>-->
       <form class="row g-3" method="POST" action="">
-    <div class="col-12">
-        {{ render_field(form.title, class="form-control") }}
+    <div class="col-md-12">
+        {{ render_field(form.eventname, class="form-check") }}
     </div>
     <div class="col-12">
-        {{ render_field(form.description, class="form-control") }}
+        {{ render_field(form.name, class="form-control") }}
+    </div>
+    <div class="col-12">
+        {{ render_field(form.nric, class="form-control") }}
     </div>
     <div class="col-md-6">
-        {{ render_field(form.start_date, class="form-control datepicker") }}
+        {{ render_field(form.school, class="form-control") }}
     </div>
     <div class="col-md-6">
-        {{ render_field(form.end_date, class="form-control datepicker") }}
+        {{ render_field(form.email, class="form-control") }}
     </div>
     <div class="col-md-4">
-        {{ render_field(form.time, class="form-control") }}
+        {{ render_field(form.awareness, class="form-check") }}
     </div>
     <div class="col-md-8">
-        {{ render_field(form.eventlocation, class="form-control") }}
-    </div>
-    <div class="col-md-2">
-        {{ render_field(form.sign_up_no, class="form-control") }}
-    </div>
-    <div class="col-8">
-        {{ render_field(form.visibility, class="form-check") }}
+        {{ render_field(form.notification, class="form-check") }}
     </div>
 
     <div class="col-12">
-        <button type="submit" class="btn btn-primary"><i class="fas fa-calendar-plus"></i> Create Event!</button>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-calendar-plus"></i> Sign Up Event!</button>
     </div>
 </form>
 

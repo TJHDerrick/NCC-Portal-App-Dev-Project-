@@ -36,7 +36,7 @@ def create_event():
     return render_template('createEvent.html', form=create_event_form)
 
 
-@event_controller.route('/updateEvent/<int:id>/', methods=['GET', 'POST'])
+@event_controller.route('/updateEvent/<id>/', methods=['GET', 'POST'])
 def update_event(id):
     update_event_form = CreateEventForm(request.form)
     if request.method == 'POST' and update_event_form.validate():
@@ -70,7 +70,7 @@ def update_event(id):
         return render_template('updateEvent.html', form=update_event_form)
 
 
-@event_controller.route('/deleteEvent/<int:id>', methods=['POST'])
+@event_controller.route('/deleteEvent/<id>', methods=['POST'])
 def delete_event(id):
     db = shelve.open('library', 'w')
     events_dict = db['events']

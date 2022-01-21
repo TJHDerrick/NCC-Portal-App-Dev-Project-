@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}Library Loan System - Retrieve signups{% endblock %}
+
+{% block content %}
+<style>
+    input, button, submit
+{
+  border:none;
+}
+</style>
+<h1 class="display-4" style="margin-top:110px">Retrieve signed up events</h1>
+<div>
+    {% if count == 0 %}
+    <p>There are no sign ups</p>
+    {% elif count == 1 %}
+    <p>There is 1 sign up</p>
+    {% else %}
+    <p>There are {{ count }} sign ups</p>
+    {% endif %}
+</div>
+<div>
+    <table
+            id="table"
+            data-toggle="table"
+            data-height="460"
+            data-show-columns="true"
+            data-show-refresh="true"
+            data-show-columns-toggle-all="true"
+            data-show-pagination-switch="true"
+            data-show-toggle="true"
+            data-show-fullscreen="true"
+            data-buttons="buttons">
+        <thead>
+        <tr>
+            <th data-field="eventname">Event Name</th>
+            <th data-field="name">Name</th>
+            <th data-field="nric">NRIC</th>
+            <th data-field="school">School</th>
+            <th data-field="email">Email</th>
+            <th data-field="awareness">Awareness</th>
+            <th data-field="notification">Notification</th>
+            <th data-field="">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for signup in signup_list %}
+        <tr>
+            <td>{{signup.get_eventname_str()}}</td>
+            <td>{{signup.name}}</td>
+            <td>{{signup.nric}}</td>
+            <td>{{signup.get_school_str()}}</td>
+            <td>{{signup.email}}</td>
+            <td>{{signup.awareness}}</td>
+            <td>{{signup.get_notification_str()}}</td>
+            <td style="text-align: center;">
+                <div class="dropdown">
+                    <button class="btn btn-outline-dark" type="button" id="dropdownMenuButton{{signup.get_id()}}"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{signup.get_id()}}">
+                        <li><a class="dropdown-item" href="/updateEvent/{{signup.get_id()}}/">Update</a></li>
+                        <li><a class="dropdown-item" href="#">
+                            <form id="delete{{signup.get_id()}}" action="{{url_for('signup.delete_signup', id=signup.get_id())}}" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </a></li>
+                    </ul>
+                </div>
+            </td>
+
+            <!--            <td><a href="#" class="btn btn-warning">Update</a></td>-->
+            <!--            <td>-->
+            <!--                <form action="" method="POST">-->
+            <!--                    <input type="submit" value="Delete" class="btn btn-danger">-->
+            <!--                </form>-->
+            <!--            </td>-->
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+
+<script>
+
+</script>
+
+{% endblock %}
+

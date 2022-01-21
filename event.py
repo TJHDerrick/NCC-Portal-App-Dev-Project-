@@ -4,14 +4,15 @@ from constants import date_format, datetime_format
 
 
 class Event:
-    id = 0
+    # id = 0
     visibility_dict = {
         'Y': 'Yes', 'N': 'No'
     }
 
     def __init__(self, title, description, start_date, end_date, time, location, visibility, image, sign_up_no):
-        Event.id += 1
-        self.__id = Event.id
+        # Event.id += 1
+        # self.__id = Event.id
+        self.id = str(uuid.uuid4())
         self.__title = title
         self.__description = description
         self.__start_date = start_date
@@ -26,7 +27,7 @@ class Event:
         self.__current_sign_up_no = 0
 
     def get_id(self):
-        return self.__id
+        return self.id
 
     def get_title(self):
         return self.__title
@@ -92,3 +93,46 @@ class Event:
 
 event = Event("title", "description", "abc", "abc", "abc", "abc", "abc", "abc ", "abc")
 print(event.get_description())
+
+
+class SignUp:
+    school_dict = {
+        '': 'Select', 'A': 'School A', 'B': 'School B', 'C': 'School C', 'D': 'School D'
+    }
+    eventname_dict = {
+        'NDP': 'National Day Parade', 'KM': 'Konfrontasi Memorial', 'CAMP': 'NCC Camp'
+    }
+    notification_dict = {
+        'Y': 'Yes', 'N': 'No'
+    }
+
+    def __init__(self, eventname, name, nric, school, email, awareness, notification):
+        self.id = str(uuid.uuid4())
+        self.eventname = eventname
+        self.name = name
+        self.nric = nric
+        self.school = school
+        self.email = email
+        self.awareness = awareness
+        self.notification = notification
+
+    def get_id(self):
+        return self.id
+
+    def get_eventname_str(self):
+        return SignUp.eventname_dict[self.eventname]
+
+    def get_school_str(self):
+        return SignUp.school_dict[self.school]
+
+    def get_notification_str(self):
+        return SignUp.notification_dict[self.notification]
+
+    def __str__(self):
+        return f'eventname: {self.get_eventname_str()}\n' \
+               f'Name: {self.name}\n' \
+               f'NRIC: {self.nric}\n' \
+               f'School: {self.get_school_str}\n' \
+               f'Email: {self.email}\n' \
+               f'Awareness: {self.awareness}\n' \
+               f'Notification: {self.get_notification_str()}\n'
