@@ -21,3 +21,4 @@ def save_user(user):
     user_dict[user.id] = user
     db[db_users_key] = user_dict
     db.close()
+

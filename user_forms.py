@@ -2,6 +2,7 @@ from wtforms import Form, StringField, PasswordField, RadioField, SelectField, T
     DateField
 from user import User
 
+
 class CreateUserForm(Form):
     email = EmailField('Email', [validators.DataRequired(), validators.Email()])
     password = PasswordField('Password', [validators.Length(min=6, max=15), validators.DataRequired()])
@@ -14,4 +15,5 @@ class CreateUserForm(Form):
     membership = RadioField('Membership', choices=User.membership_dict.items(), default='F')
     user_type = RadioField('User Type', choices=User.user_type_dict.items(), default='C')
     remarks = TextAreaField('Remarks', [validators.Optional()])
+
 
