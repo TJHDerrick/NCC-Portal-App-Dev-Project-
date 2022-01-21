@@ -2,8 +2,23 @@ from wtforms import Form, StringField, PasswordField, RadioField, SelectField, T
     DateField, TimeField, IntegerField, BooleanField
 from event import Event, SignUp
 from user import User
+# import shelve
+#
+# db_name = 'library'
+# db_events_key = 'events'
+#
+#
+# def get_event_list():
+#     event_dict = {}
+#     db = shelve.open(db_name)
+#     if db_events_key in db:
+#         event_dict = db[db_events_key]
+#     db.close()
+#     return event_dict.values()
 
-
+# make a variable for get_event_list
+# name variable eventList
+# create new dictionary as eventsform key = event shortform: value = event name
 class CreateEventForm(Form):
     title = StringField('Title: ', [validators.Length(min=1, max=150), validators.DataRequired()])
     description = TextAreaField('Description: ', [validators.DataRequired()])
