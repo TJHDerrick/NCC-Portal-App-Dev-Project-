@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15ec2675-f82d-403d-8f9a-8da48ac7f86c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/signup_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/signup_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/SignUp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/retrieveSignUp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan_forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loan_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/createLoan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NCC-Portal-App-Dev-Project-.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NCC-Portal-App-Dev-Project-.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event.py" beforeDir="false" afterPath="$PROJECT_DIR$/event.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/event_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event_forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/event_forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.dir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/createEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/createEvent.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/events.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/equipmentLoan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/equipmentLoan.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/includes/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/updateEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/updateEvent.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,5 +202,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
