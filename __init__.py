@@ -18,7 +18,7 @@ app.register_blueprint(kitExchange_controller)
 
 @app.route('/')
 def home():
-    flash("Don't tell anyone")
+    flash("Welcome to NCC Portal")
     return render_template('home.html')
 
 
