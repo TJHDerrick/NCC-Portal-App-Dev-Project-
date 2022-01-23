@@ -1,6 +1,6 @@
 import shelve
 
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, flash
 from event_forms import CreateEventForm
 from event import Event
 from event_service import get_event_list, save_event, save_update_event, retrieve_event_from_id
@@ -17,23 +17,30 @@ def retrieve_events():
 @event_controller.route('/createEvent', methods=['GET', 'POST'])
 def create_event():
     create_event_form = CreateEventForm(request.form)
-    if request.method == 'POST' and create_event_form.validate():
-        title = create_event_form.title.data
-        description = create_event_form.description.data
-        start_date = create_event_form.start_date.data
-        end_date = create_event_form.end_date.data
-        time = create_event_form.time.data
-        location = create_event_form.eventlocation.data
-        visibility = create_event_form.visibility.data
-        image = None
-        sign_up_no = create_event_form.sign_up_no.data
-        event = Event(title, description, start_date, end_date, time, location, visibility, image, sign_up_no)
-        print(event)
+    error_message = ''
+    if request.method == 'POST':
+        if create_event_form.validate_on_submit():
+            shortform = create_event_form.shortform.data
+            title = create_event_form.title.data
+            description = create_event_form.description.data
+            start_date = create_event_form.start_date.data
+            end_date = create_event_form.end_date.data
+            time = create_event_form.time.data
+            location = create_event_form.eventlocation.data
+            visibility = create_event_form.visibility.data
+            image = None
+            sign_up_no = create_event_form.sign_up_no.data
+            event = Event(shortform, title, description, start_date, end_date, time, location, visibility, image, sign_up_no)
+            print(event)
 
-        save_event(event)
-        # return redirect('/retrieveUsers')
-        return redirect(url_for('event.retrieve_events'))
-    return render_template('createEvent.html', form=create_event_form)
+            save_event(event)
+            # return redirect('/retrieveUsers')
+            return redirect(url_for('event.retrieve_events'))
+        else:
+            error_message = "Start date is greater than End date"
+            flash(error_message, 'error')
+    #         should render error in form
+    return render_template('createEvent.html', form=create_event_form, error=error_message)
 
 
 @event_controller.route('/updateEvent/<id>/', methods=['GET', 'POST'])
@@ -44,6 +51,7 @@ def update_event(id):
         events_dict = db['events']
 
         event = events_dict.get(id)
+        event.set_shortform(update_event_form.shortform.data)
         event.set_title(update_event_form.title.data)
         event.set_description(update_event_form.description.data)
         event.set_start_date(update_event_form.start_date.data)
@@ -59,6 +67,7 @@ def update_event(id):
         return redirect(url_for('event.retrieve_events'))
     else:
         event = retrieve_event_from_id(id)
+        update_event_form.shortform.data = event.get_shortform()
         update_event_form.title.data = event.get_title()
         update_event_form.description.data = event.get_description()
         update_event_form.start_date.data = event.get_start_date()
@@ -77,4 +86,6 @@ def delete_event(id):
     event = events_dict.pop(id)
     db['events'] = events_dict
     db.close()
+    flash("Delete {} Successful".format(event.get_title()), 'success')
     return redirect(url_for('event.retrieve_events'))
+

@@ -66,21 +66,32 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{event.get_id()}}">
                         <li><a class="dropdown-item" href="/updateEvent/{{event.get_id()}}/">Update</a></li>
-                        <li><a class="dropdown-item" href="#">
-                            <form id="delete{{event.get_id()}}" action="{{url_for('event.delete_event', id=event.get_id())}}" method="POST">
-                                <button type="submit">Delete</button>
-                            </form>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#delete-{{event.id}}">
+                                Delete
                         </a></li>
                     </ul>
+                    <form id="delete{{event.get_id()}}" action="{{url_for('event.delete_event', id=event.get_id())}}" method="POST">
+    <div class="modal fade" id="delete-{{event.get_id()}}" tabindex="-1" aria-labelledby="delete-{{event.get_id()}}" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Event</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete {{event.get_title()}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
                 </div>
             </td>
-
-            <!--            <td><a href="#" class="btn btn-warning">Update</a></td>-->
-            <!--            <td>-->
-            <!--                <form action="" method="POST">-->
-            <!--                    <input type="submit" value="Delete" class="btn btn-danger">-->
-            <!--                </form>-->
-            <!--            </td>-->
         </tr>
         {% endfor %}
 

@@ -15,8 +15,11 @@
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>-->
             <form class="row g-3" method="POST" action="">
-                <div class="col-12">
+                <div class="col-8">
                     {{ render_field(form.title, class="form-control") }}
+                </div>
+                <div class="col-4">
+                    {{ render_field(form.shortform, class="form-control") }}
                 </div>
                 <div class="col-12">
                     {{ render_field(form.description, class="form-control") }}
@@ -33,17 +36,19 @@
                 <div class="col-md-8">
                     {{ render_field(form.eventlocation, class="form-control") }}
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-12">
                     {{ render_field(form.sign_up_no, class="form-control") }}
                 </div>
-                <div class="col-8">
+                <div class="col-12">
                     {{ render_field(form.visibility, class="form-check") }}
                 </div>
 
                 <div class="col-12">
+                    <div class="float-end">
                     <button type="submit" class="btn btn-outline-warning"><i class="fas fa-calendar-plus"></i> Update
                         Event!
                     </button>
+                    </div>
                 </div>
             </form>
 
