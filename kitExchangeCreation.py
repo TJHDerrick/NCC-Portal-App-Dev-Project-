@@ -1,16 +1,14 @@
-
+import uuid
 from datetime import datetime
 
 
 class Creation:
-    id = 0
     sizes_dict = {
      'S': 'Small', 'M': 'Medium', 'L': 'Large'
     }
 
     def __init__(self, name, description, sizes, location):
-        Creation.id += 1
-        self.__id = Creation.id
+        self.id = str(uuid.uuid4())
         self.__name = name
         self.__description = description
         self.__sizes = sizes
@@ -19,7 +17,7 @@ class Creation:
         self.__datetime_updated = datetime.now()
 
     def get_id(self):
-        return self.__id
+        return self.id
 
     def get_name(self):
         return self.__name
