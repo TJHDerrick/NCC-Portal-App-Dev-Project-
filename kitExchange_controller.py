@@ -37,7 +37,7 @@ def create_creation():
     return render_template('kitExchangeCreation.html', form=create_creation_form)
 
 
-@kitExchange_controller.route('/updatekitExchange/<int:id>/', methods=['GET', 'POST'])
+@kitExchange_controller.route('/updatekitExchange/<id>/', methods=['GET', 'POST'])
 def update_kit(id):
     update_creation_form = CreateCreationForm(request.form)
     if request.method == 'POST' and update_creation_form.validate():
@@ -63,7 +63,7 @@ def update_kit(id):
         return render_template('updatekitExchange.html', form=update_creation_form)
 
 
-@kitExchange_controller.route('/deleteCreation/<int:id>', methods=['POST'])
+@kitExchange_controller.route('/deleteCreation/<id>', methods=['POST'])
 def delete_creation(id):
     db = shelve.open('library', 'w')
     creation_dict = db['creation']
