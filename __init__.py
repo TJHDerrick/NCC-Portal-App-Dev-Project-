@@ -8,6 +8,7 @@ from Forms import CreateUserForm, UserSignUp, CreateCustomerForm, Login
 import shelve, Person, Customer
 from kitExchange_controller import kitExchange_controller
 from product_controller import product_controller
+from loan_controller import loan_controller
 
 app = Flask(__name__)
 app.secret_key = 'Hello world'
@@ -16,7 +17,7 @@ toastr.init_app(app)
 # app.register_blueprint(user_controller)
 app.register_blueprint(event_controller)
 app.register_blueprint(signup_controller)
-
+app.register_blueprint(loan_controller)
 app.register_blueprint(kitExchange_controller)
 app.register_blueprint(product_controller)
 
@@ -37,24 +38,9 @@ def product_exchange_admin():
     return render_template('product_Admin.html')
 
 
-@app.route('/contactUs')
-def contact_us():
-    return render_template('contactUs.html')
-
-
 @app.route('/kitExchange')
 def kit_exchange():
     return render_template('kitExchange.html')
-
-
-@app.route('/equipmentLoan')
-def equipment_loan():
-    return render_template('equipmentLoan.html')
-
-
-@app.route('/facilityReservation')
-def facility_reservation():
-    return render_template('facilityReservation.html')
 
 
 @app.route('/events')
