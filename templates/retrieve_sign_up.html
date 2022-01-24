@@ -59,6 +59,7 @@
                         <i class="fas fa-ellipsis-v"></i>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton{{signup.get_id()}}">
+                        <li><a class="dropdown-item" href="/updateEvent/{{signup.get_id()}}/">Update</a></li>
                         <li><a class="dropdown-item" href="#">
                             <form id="delete{{signup.get_id()}}" action="{{url_for('signup.delete_signup', id=signup.get_id())}}" method="POST">
                                 <button type="submit">Delete</button>

@@ -9,10 +9,11 @@ class Event:
         'Y': 'Yes', 'N': 'No'
     }
 
-    def __init__(self, title, description, start_date, end_date, time, location, visibility, image, sign_up_no):
+    def __init__(self, shortform, title, description, start_date, end_date, time, location, visibility, image, sign_up_no):
         # Event.id += 1
         # self.__id = Event.id
         self.id = str(uuid.uuid4())
+        self.__shortform = shortform
         self.__title = title
         self.__description = description
         self.__start_date = start_date
@@ -28,6 +29,9 @@ class Event:
 
     def get_id(self):
         return self.id
+
+    def get_shortform(self):
+        return self.__shortform
 
     def get_title(self):
         return self.__title
@@ -58,6 +62,9 @@ class Event:
 
     def get_current_sign_up_no(self):
         return self.__current_sign_up_no
+
+    def set_shortform(self, shortform):
+        self.__shortform = shortform
 
     def set_title(self, title):
         self.__title = title
@@ -91,7 +98,7 @@ class Event:
         self.__current_sign_up_no = current
 
 
-event = Event("title", "description", "abc", "abc", "abc", "abc", "abc", "abc ", "abc")
+event = Event("shortform", "title", "description", "abc", "abc", "abc", "abc", "abc", "abc ", "abc")
 print(event.get_description())
 
 
@@ -100,7 +107,7 @@ class SignUp:
         '': 'Select', 'A': 'School A', 'B': 'School B', 'C': 'School C', 'D': 'School D'
     }
     eventname_dict = {
-        'NDP': 'National Day Parade', 'KM': 'Konfrontasi Memorial', 'CAMP': 'NCC Camp'
+        '': 'Select', 'NDP': 'National Day Parade', 'KM': 'Konfrontasi Memorial', 'CAMP': 'NCC Camp'
     }
     notification_dict = {
         'Y': 'Yes', 'N': 'No'

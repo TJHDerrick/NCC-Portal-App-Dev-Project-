@@ -16,7 +16,7 @@
     <a href="#" class="btn btn-primary">Go somewhere</a>-->
       <form class="row g-3" method="POST" action="">
     <div class="col-md-12">
-        {{ render_field(form.eventname, class="form-check") }}
+        {{ render_field(form.eventname, class="form-select") }}
     </div>
     <div class="col-12">
         {{ render_field(form.name, class="form-control") }}
@@ -31,7 +31,9 @@
         {{ render_field(form.email, class="form-control") }}
     </div>
     <div class="col-md-4">
-        {{ render_field(form.awareness, class="form-check") }}
+        <div class="form-check">
+        {{ render_field(form.awareness, class="form-check-input") }}
+        </div>
     </div>
     <div class="col-md-8">
         {{ render_field(form.notification, class="form-check") }}
