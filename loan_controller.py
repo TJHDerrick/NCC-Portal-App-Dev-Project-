@@ -13,6 +13,10 @@ def retrieve_loan():
     loan_list = get_loan_list()
     return render_template('retrieveLoan.html', count=len(loan_list), loan_list=loan_list)
 
+@loan_controller.route('/successLoan')
+def success_loan():
+    loan = get_loan_list()
+    return render_template('successLoan.html',loan = loan)
 
 @loan_controller.route('/createLoan', methods=['GET', 'POST'])
 def create_loan():
@@ -28,7 +32,7 @@ def create_loan():
 
         save_loan(loan)
         # return redirect('/retrieveUsers')
-        return redirect(url_for('loan.retrieve_loan'))
+        return redirect(url_for('loan.success_loan'))
     return render_template('createLoan.html', form=create_loan_form)
 
 
