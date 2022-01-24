@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}NCC Portal - Product Exchange????{% endblock %}
+
+{% block content %}
+
+<style>
+
+  input, button, submit
+{
+  border:none;
+}
+
+</style>
+
+<h1 class="display-4" style="margin-top:110px">Items</h1>
+<div>
+    {% if count == 0 %}
+    <p>There are no Items</p>
+    {% elif count == 1 %}
+    <p>There is 1 Items</p>
+    {% else %}
+    <p>There are {{ count }} Items</p>
+    {% endif %}
+</div>
+<div>
+    <table
+            id="table"
+            data-toggle="table"
+            data-height="460"
+            data-show-columns="true"
+            data-show-refresh="true"
+            data-show-columns-toggle-all="true"
+            data-show-pagination-switch="true"
+            data-show-toggle="true"
+            data-show-fullscreen="true">
+        <thead>
+        <tr>
+            <th data-field="id">ID</th>
+            <th data-field="name">Name</th>
+            <th data-field="description">Description</th>
+            <th data-field="sizes">Up to Sizes</th>
+            <th data-field="location">Location</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for creation in creation_list %}
+        <tr>
+            <td>{{creation.get_id()}}</td>
+            <td>{{creation.get_name()}}</td>
+            <td>{{creation.get_description()}}</td>
+            <td>{{creation.get_sizes()}}</td>
+            <td>{{creation.get_location()}}</td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
