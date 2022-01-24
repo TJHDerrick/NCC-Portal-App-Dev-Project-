@@ -3,6 +3,7 @@ from flask_toastr import Toastr
 from user_controller import user_controller
 from event_controller import event_controller
 from signup_controller import signup_controller
+from loan_controller import loan_controller
 from kitExchange_controller import kitExchange_controller
 
 
@@ -14,7 +15,7 @@ app.register_blueprint(user_controller)
 app.register_blueprint(event_controller)
 app.register_blueprint(signup_controller)
 app.register_blueprint(kitExchange_controller)
-
+app.register_blueprint(loan_controller)
 
 @app.route('/')
 def home():
@@ -35,16 +36,6 @@ def kit_exchange():
 @app.route('/kitExchange_Admin')
 def kit_exchange_admin():
     return render_template('kitExchange_Admin.html')
-
-
-@app.route('/equipmentLoan')
-def equipment_loan():
-    return render_template('equipmentLoan.html')
-
-
-@app.route('/facilityReservation')
-def facility_reservation():
-    return render_template('facilityReservation.html')
 
 
 @app.route('/events')
