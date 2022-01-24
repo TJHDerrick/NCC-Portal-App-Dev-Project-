@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15ec2675-f82d-403d-8f9a-8da48ac7f86c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.bak" beforeDir="false" afterPath="$PROJECT_DIR$/library.bak" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.dat" beforeDir="false" afterPath="$PROJECT_DIR$/library.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.dir" beforeDir="false" afterPath="$PROJECT_DIR$/library.dir" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loan_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/loan_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loan_forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/loan_forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contactUs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/createLoan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/createLoan.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/_navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/_navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/retrieveLoan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/retrieveLoan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/successLoan.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/successLoan.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

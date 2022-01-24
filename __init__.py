@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+
 from flask import Flask, render_template, flash, request, redirect, url_for
 from flask_toastr import Toastr
 # from user_controller import user_controller
@@ -269,7 +269,6 @@ def login():
 
 if __name__ == '__main__':
     app.run(port=5001, debug=True)
-=======
 from flask import Flask, render_template, flash
 from flask_toastr import Toastr
 from user_controller import user_controller
@@ -317,4 +316,4 @@ def events():
 
 if __name__ == '__main__':
     app.run(port=5002, debug=True)
->>>>>>> Stashed changes
+

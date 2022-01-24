@@ -15,8 +15,13 @@ def retrieve_loan():
 
 @loan_controller.route('/successLoan')
 def success_loan():
-    loan = get_loan_list()
-    return render_template('successLoan.html',loan = loan)
+        create_loan_form = CreateLoanForm(request.form)
+        if request.method == 'POST' and create_loan_form.validate():
+            email = create_loan_form.email.data
+            number = create_loan_form.number.data
+            date = create_loan_form.date.data
+            choice = create_loan_form.choice.data
+        return render_template('successLoan.html',)
 
 @loan_controller.route('/createLoan', methods=['GET', 'POST'])
 def create_loan():
