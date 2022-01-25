@@ -6,6 +6,8 @@
 {% from "includes/_formHelper.html" import render_field %}
     <!-- Login Form https://www.markuptag.com/simple-login-form-design-in-bootstrap-5/ -->
     <div class="background-image">
+        <br>
+        <br>
         <div class="row">
             <div class="col-md-4 offset-md-7">
                 <div class="login-form bg-colour mt-6 p-4" id="loginForm">
@@ -15,19 +17,19 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                       </div>
                       {% endif %}
-                    <form action="" method="POST" class="row g-3">
+                    <form action="" method="POST" class="row g-2">
                         <h4 class="text-black">Log In</h4>
-                        <div class="col-12">
+                        <div class="col-6">
                            {{ render_field(form.email, class="form-control") }}
                             <!--label>Email:</label>
                             <input type="text" name="email" class="form-control" placeholder="Email"-->
                         </div>
-                        <div class="col-12">
+                        <div class="col-6">
                             {{ render_field(form.password, class="form-control") }}
                             <!--label>Password:</label>
                             <input type="password" name="password" class="form-control" placeholder="Password"-->
                         </div>
-                        <div class="col-12">
+                        <div class="col-6">
                             <button type="submit" class="btn btn-dark float-end">Login</button>
                         </div>
                     </form>
