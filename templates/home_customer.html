@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Portal - Home{% endblock %}
+
+{% block navbar %}
+{% include 'includes/_customer_navbar.html' %}
+{% endblock %}
+
+{% block content %}
+
+<body style="background-image: url('static/images/ricepaper-green.jpg')">
+<div style="background: url('static/images/homepagebackgroundresize.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;">
+    <div class="container">
+  <div class="card border-0 shadow my-5 opacity-75">
+    <div class="card-body p-5">
+      <h1 class="fw-light text-center">Welcome to NCC Portal</h1>
+      <p class="lead text-center">Members</p>
+      <p class="lead text-center">Members of NYP SIT</p>
+      <div style="height: 500px"></div>
+      <p class="lead mb-0 text-center">End</p>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}
+
