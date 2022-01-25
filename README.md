@@ -1,4 +1,4 @@
-NCC Portal 
+**NCC Portal **
 
 Team Members:
 1) Derrick (User Management) 
@@ -11,4 +11,3 @@ Modules Used:
 2) flask_toastr 
 3) wtforms
 4) shelve
-5) 
